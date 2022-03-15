@@ -15,8 +15,8 @@
 #include <unistd.h>
 #include <time.h>
 
-#include <openframe/openframe.h>
-#include <openframe/Command.h>
+#include "openframe.h"
+#include "Command.h"
 
 namespace openframe {
 

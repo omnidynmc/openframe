@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
 
-#include <openframe/openframe.h>
-#include <openframe/App/Application.h>
-#include <openframe/ModuleList.h>
-#include <openframe/stdinCommands.h>
+#include "openframe.h"
+#include "App/Application.h"
+#include "ModuleList.h"
+#include "stdinCommands.h"
 
 namespace openframe {
 

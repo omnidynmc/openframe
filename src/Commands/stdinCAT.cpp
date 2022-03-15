@@ -10,9 +10,9 @@
 #include <unistd.h>
 #include <time.h>
 
-#include <openframe/openframe.h>
-#include <openframe/Command.h>
-#include <openframe/stdinCommands.h>
+#include "openframe.h"
+#include "Command.h"
+#include "stdinCommands.h"
 
 namespace openframe {
 /**************************************************************************

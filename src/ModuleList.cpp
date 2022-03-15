@@ -8,9 +8,9 @@
 #include <time.h>
 #include <dlfcn.h>
 
-#include <openframe/openframe.h>
-#include <openframe/Module.h>
-#include <openframe/ModuleList.h>
+#include "openframe.h"
+#include "Module.h"
+#include "ModuleList.h"
 
 namespace openframe {
   ModuleList::ModuleList() {
