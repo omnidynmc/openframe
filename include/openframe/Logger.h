@@ -23,12 +23,12 @@
 #include <map>
 #include <string>
 
-#include <openframe/Refcount.h>
-#include <openframe/OFLock.h>
+#include "Refcount.h"
+#include "OFLock.h"
 
-#include "openframe/logging/logstream.h"
+#include "logging/logstream.h"
 //to be able to access cnull
-#include "openframe/logging/nullstream.h"
+#include "logging/nullstream.h"
 
 
 namespace openframe {

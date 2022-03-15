@@ -12,7 +12,7 @@
 #include <unistd.h>
 #include <pthread.h>
 
-#include "openframe/OFLock.h"
+#include "OFLock.h"
 
 namespace openframe {
   using std::string;

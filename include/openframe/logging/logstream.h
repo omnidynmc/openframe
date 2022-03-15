@@ -20,9 +20,9 @@
 #ifndef __OPENFRAME_LOGSTREAM_HH
 #define __OPENFRAME_LOGSTREAM_HH
 
-#include "openframe/logging/nullstream.h"
-#include "openframe/logging/logstreambuf.h"
-#include "openframe/logging/loglevel.h"
+#include "logging/nullstream.h"
+#include "logging/logstreambuf.h"
+#include "logging/loglevel.h"
 
 //to get string << operator for logstream
 #include <string>

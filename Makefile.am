@@ -4,4 +4,5 @@ SUBDIRS = src/App \
           src/Socket \
           src/Thread \
           src \
+          include/openframe \
           test

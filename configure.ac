@@ -5,7 +5,7 @@ AC_PREREQ([2.65])
 AC_INIT([openframe], [1.0.0.1], [gcarter@openaprs.net])
 AC_CONFIG_SRCDIR([src/StringTool.cpp])
 AC_CONFIG_HEADERS([include/openframe/config.h])
-AM_INIT_AUTOMAKE([openframe], [1.0.0.1])
+AM_INIT_AUTOMAKE([subdir-objects])
 LT_INIT
 AC_CONFIG_MACRO_DIR([m4])
 
@@ -22,14 +22,18 @@ AC_PROG_LN_S
 AC_LANG([C++])
 
 prefix="/usr/local"
+
+#prefix="`pwd`"
 #bindir="`pwd`"
 #libdir="`pwd`/lib"
 #includedir="`pwd`/include"
 mysql_includedir="/usr/include/mysql"
 mysqlpp_includedir="/usr/include/mysql++"
 
-CPPFLAGS="$CPPFLAGS -I/usr/include -I$mysql_includedir -I$mysqlpp_includedir"
-CXXFLAGS="-Wall -pipe -g -I$includedir -I$mysql_includedir -I$mysqlpp_includedir"
+local_include="`pwd`/include"
+
+CPPFLAGS="$CPPFLAGS -I$local_include -I/usr/include -I$mysql_includedir -I$mysqlpp_includedir"
+CXXFLAGS="-Wall -pipe -g -I$local_include -I$includedir -I$mysql_includedir -I$mysqlpp_includedir"
 CXX="g++"
 LIBS="$LIBS"
 
@@ -129,6 +133,7 @@ dnl CXXFLAGS="$CXXFLAGS -I`pwd`/include -I$MYSQL_INCLUDE $DEPS_CFLAGS"
 LIBS="$LIBS -L`pwd`/lib $DEPS_LIBS $READLINE_LIBS"
 
 AC_CONFIG_FILES([Makefile
+                 include/openframe/Makefile
                  src/Makefile
                  src/App/Makefile
                  src/Commands/Makefile
