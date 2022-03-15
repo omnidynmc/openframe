@@ -8,13 +8,13 @@
 #include <signal.h>
 #include <pthread.h>
 
-#include <openframe/openframe.h>
-#include <openframe/App/Application.h>
-#include <openframe/stdinCommands.h>
-#include <openframe/ModuleList.h>
-
 #include <readline/readline.h>
 #include <readline/history.h>
+
+#include "openframe.h"
+#include "App/Application.h"
+#include "stdinCommands.h"
+#include "ModuleList.h"
 
 namespace openframe {
   using namespace loglevel;
