@@ -21,10 +21,10 @@ AC_PROG_INSTALL
 AC_PROG_LN_S
 AC_LANG([C++])
 
-prefix="`pwd`"
-bindir="`pwd`"
-libdir="`pwd`/lib"
-includedir="`pwd`/include"
+prefix="/usr/local"
+#bindir="`pwd`"
+#libdir="`pwd`/lib"
+#includedir="`pwd`/include"
 mysql_includedir="/usr/include/mysql"
 mysqlpp_includedir="/usr/include/mysql++"
 
