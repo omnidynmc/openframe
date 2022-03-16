@@ -162,7 +162,7 @@ namespace openframe {
  **************************************************************************/
 
 #define STRINGTOOL_DEBUG_STRINGS(x, y, z) \
-list<string> y; \
+std::list<std::string> y; \
 x->showStringTree(z, 1, "", y);
 
 } // namespace openframe
