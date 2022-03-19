@@ -44,7 +44,7 @@ namespace openframe {
       Vars(const char, const char);
       Vars(const std::string &);
       Vars(const std::string &, const char, const char);
-      ~Vars();
+      virtual ~Vars();
 
       static const char DEFAULT_DELIMITER;
       static const char DEFAULT_FIELD_DELIMITER;
