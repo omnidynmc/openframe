@@ -53,7 +53,7 @@ namespace openframe {
       _sqlpp->set_option(new mysqlpp::ReconnectOption(true));
       _sqlpp->set_option(new mysqlpp::MultiResultsOption(true));
       _sqlpp->set_option(new mysqlpp::MultiStatementsOption(true));
-      _sqlpp->set_option(new mysqlpp::SetCharsetNameOption("utf8"));
+      _sqlpp->set_option(new mysqlpp::SetCharsetNameOption("utf8mb4"));
     } // try
     catch(std::bad_alloc xa) {
       assert(false);
