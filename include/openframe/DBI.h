@@ -113,6 +113,7 @@ namespace openframe {
       const bool purge(const std::string &);
       const bool save(const std::string &, const std::string &name = "");
       const bool load(const std::string &);
+      const bool reconnect();
       const storeSizeType store(storeType &);
       const storeType::const_iterator storeBegin() const { return _store.begin(); }
       const storeType::const_iterator storeEnd() const { return _store.end(); }

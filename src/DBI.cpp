@@ -55,7 +55,7 @@ namespace openframe {
       _sqlpp->set_option(new mysqlpp::MultiStatementsOption(true));
       _sqlpp->set_option(new mysqlpp::SetCharsetNameOption("utf8mb4"));
     } // try
-    catch(std::bad_alloc xa) {
+    catch(std::bad_alloc &xa) {
       assert(false);
     } // catch
 
@@ -100,11 +100,18 @@ namespace openframe {
     return itr->second;
   } // DBI::q
 
+  const bool DBI::reconnect() {
+    if (_sqlpp->connected())
+      _sqlpp->disconnect();
+
+    return _connect();
+  } // DBI::reconnect
+
   const bool DBI::_connect() {
     try {
       _sqlpp->connect(_db.c_str(), _host.c_str(), _user.c_str(), _pass.c_str(), 3306);
     } // try
-    catch(mysqlpp::ConnectionFailed e) {
+    catch(mysqlpp::ConnectionFailed &e) {
       LOG(LogError, <<"DBI: #"
                     << e.errnum()
                     << " "
@@ -122,7 +129,7 @@ namespace openframe {
     try {
       res = query.store();
     } // try
-    catch(mysqlpp::BadQuery e) {
+    catch(mysqlpp::BadQuery &e) {
       LOG(LogError, <<"DBI: #"
                     << e.errnum()
                     << " "
